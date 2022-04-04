@@ -20,14 +20,7 @@ class Home extends StatelessWidget {
           backgroundColor: Colors.red[600],
         ),
         body: Center(
-          child: Text("Hello flutter",
-           style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2.0,
-              color: Colors.grey,
-              fontFamily: 'IndieFlower',
-            ),),
+          child: Image.asset('assets/image1.jpg'),
           
         ),
         floatingActionButton: FloatingActionButton(
