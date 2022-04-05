@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home:Home()));
+  runApp(MaterialApp(home: Home()));
 }
 
 class Home extends StatelessWidget {
@@ -14,14 +14,26 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             "My first App",
-           
           ),
           centerTitle: true,
           backgroundColor: Colors.red[600],
         ),
         body: Center(
-          child: Image.asset('assets/image1.jpg'),
-          
+          child: IconButton(
+            onPressed: () {
+              print('You clicked me');
+            },
+            icon: Icon(Icons.alternate_email),
+            color: Colors.amber,
+          ),
+          // RaisedButton.icon(
+          // onPressed: () {
+
+          // },
+          // icon:Icon(Icons.mail) ,
+          // label: Text('mail me'),
+          // color: Colors.amber,
+          // ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed:
