@@ -9,38 +9,52 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "My first App",
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.red[600],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "My first App",
         ),
-        body: Center(
-          child: IconButton(
-            onPressed: () {
-              print('You clicked me');
-            },
-            icon: Icon(Icons.alternate_email),
-            color: Colors.amber,
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 229, 53, 53),
+      ),
+       body:Row(
+         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+         crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text("hello world",
           ),
-          // RaisedButton.icon(
-          // onPressed: () {
+          FlatButton(onPressed: (){},
+          color: Colors.amber,
+          child: Text("Click"),
+          ),
+          Container(
+            color: Colors.cyan
+            ,
+            padding: EdgeInsets.all(30.0),
+            child: Text("Inside Container"),
+          )
+        ],
+      
+      ),
+       
 
-          // },
-          // icon:Icon(Icons.mail) ,
-          // label: Text('mail me'),
-          // color: Colors.amber,
-          // ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed:
-              () {}, //here i got error because onpressed is required here
-          child: Text('click'),
-          backgroundColor: Colors.black,
-        ),
+
+       //Padding(
+      //   padding: EdgeInsets.all(90.0),
+      //   child: Text('hello'),
+        
+        // padding: EdgeInsets.all(20.0),
+        // margin: EdgeInsets.all(30.0),
+        // color: Colors.grey[400],
+        // child: Text('hello'),
+        
+      
+      
+      
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {}, //here i got error because onpressed is required here
+        child: Text('click'),
+        backgroundColor: Colors.black,
       ),
     );
   }
